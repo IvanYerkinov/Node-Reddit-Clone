@@ -28,6 +28,8 @@ app.get('/', (req, res) => res.render('posts-index'))
 
 app.get('/posts/new', (req, res) => res.render('posts-new'))
 
+app.get('/posts/:id', (req, res) => res.render('posts-show'))
+
 
 //Listen
 
