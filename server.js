@@ -2,8 +2,6 @@ const express = require('express')
 const app = express()
 const port = 3000
 
-const posts = require('./controllers/posts.js')(app);
-
 const bodyParser = require('body-parser');
 const expressValidator = require('express-validator');
 
@@ -23,14 +21,10 @@ app.engine('handlebars', exphbs({defaultLayout: 'main'}));
 app.set('view engine', 'handlebars');
 
 //Routes
-
-app.get('/', (req, res) => res.render('posts-index'))
-
-app.get('/posts/new', (req, res) => res.render('posts-new'))
-
-app.get('/posts/:id', (req, res) => res.render('posts-show'))
-
+require('./controllers/posts.js')(app);
 
 //Listen
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`))
+
+module.exports = app;
