@@ -22,6 +22,8 @@ app.set('view engine', 'handlebars');
 
 //Routes
 require('./controllers/posts.js')(app);
+require('./controllers/comments.js')(app);
+
 
 //Listen
 
