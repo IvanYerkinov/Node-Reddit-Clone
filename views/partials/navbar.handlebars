@@ -2,12 +2,17 @@
 <div class="container-fluid">
 <div class="navbar">
     <a href="#">Reddit</a>
-    <a href="/posts/new" class="btn btn-primary navbar-btn">New Post</a>
+    {{#if currentUser}}
+  <a href="/posts/new" class="btn btn-primary navbar-btn">New Post</a>
+{{/if}}
 </div>
 <ul class="nav navbar-nav navbar-right">
-      <li><a href="/logout">Logout</a></li>
-      <li><a href="/login">Login</a></li>
-      <li><a href="/sign-up">Sign Up</a></li>
-    </ul>
+  {{#if currentUser}}
+    <li><a href="/logout">Logout</a></li>
+  {{else}}
+    <li><a href="/login">Login</a></li>
+    <li><a href="/sign-up">Sign Up</a></li>
+  {{/if}}
+</ul>
   </div>
 </div>
