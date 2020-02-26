@@ -39,7 +39,7 @@ module.exports = (app) => {
     });
 });
 
-  app.get('/posts/new', (req, res) => {var currentUser = req.user; res.render("posts-new", { currentUser }));}
+  app.get('/posts/new', (req, res) => { var currentUser = req.user; res.render("posts-new", { currentUser } ) } );
 
   app.get("/posts/:id", function (req, res) {
           var currentUser = req.user;
@@ -56,8 +56,7 @@ module.exports = (app) => {
 
   app.get("/home", (req, res) => {
       var currentUser = req.user;
-      res.render("home", { currentUser }));
-  }
+      res.render("home", { currentUser }) });
 
   app.get('/', (req, res) => {
       var currentUser = req.user;
