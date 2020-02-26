@@ -32,7 +32,8 @@ it("should be able to signup", function(done) {
   });
 });
 
+});
+
 after(function () {
   agent.close()
-});
 });
