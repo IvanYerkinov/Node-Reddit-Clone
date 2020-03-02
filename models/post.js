@@ -20,4 +20,4 @@ PostSchema
     .pre('find', Populate('author'))
 
 
-module.exports = Post;
+module.exports = mongoose.model("Post", PostSchema);
