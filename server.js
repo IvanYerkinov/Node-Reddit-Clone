@@ -15,6 +15,7 @@ const mongod = require('./data/reddit-db');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
+app.use(express.static('public'));
 
 // Add after body parser initialization!
 app.use(expressValidator());
