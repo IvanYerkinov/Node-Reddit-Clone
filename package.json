@@ -1,7 +1,7 @@
 {
   "name": "redditproj",
   "version": "1.0.0",
-  "description": "Redditproj",
+  "description": "Redditproj v1",
   "main": "server.js",
   "scripts": {
     "test": "mocha",
